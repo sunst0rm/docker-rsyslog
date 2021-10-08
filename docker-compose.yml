@@ -1,0 +1,19 @@
+version: '3'
+services:
+  monolog-rsyslog:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: monolog-rsyslog
+
+  monolog-local0:
+    build: 
+      context: .
+      dockerfile: Dockerfile.info
+    image: monolog-local0
+
+  monolog-local1:
+    build: 
+      context: .
+      dockerfile: Dockerfile.info
+    image: monolog-local1

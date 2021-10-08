@@ -1,0 +1,12 @@
+FROM alpine:3.13.5
+
+RUN apk add rsyslog
+
+COPY rsysloginfo.conf /etc/rsyslog.conf
+
+COPY cmd.sh /cmd.sh
+RUN chmod 755 /cmd.sh
+
+CMD ["/cmd.sh"]
+
+EXPOSE 514
